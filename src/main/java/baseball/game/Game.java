@@ -1,7 +1,7 @@
 package baseball.game;
 
-import baseball.role.Computer;
-import baseball.role.User;
+import baseball.domain.model.Computer;
+import baseball.domain.model.User;
 import baseball.utils.PrintUtils;
 import baseball.utils.InputValue;
 

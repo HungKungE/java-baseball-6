@@ -1,4 +1,4 @@
-package baseball.role;
+package baseball.domain.model;
 
 import camp.nextstep.edu.missionutils.Randoms;
 
@@ -16,21 +16,17 @@ public class Computer {
         return numbers;
     }
 
-    public void setNumbers(List<Integer> numbers) {
-        this.numbers = numbers;
-    }
-
     public void generateNewNumbers(){
-        List<Integer> computer = new ArrayList<>();
+        List<Integer> numbers = new ArrayList<>();
 
-        while (computer.size() < 3) {
+        while (numbers.size() < 3) {
             int randomNumber = Randoms.pickNumberInRange(1, 9);
 
-            if (!computer.contains(randomNumber)) {
-                computer.add(randomNumber);
+            if (!numbers.contains(randomNumber)) {
+                numbers.add(randomNumber);
             }
         }
 
-        setNumbers(computer);
+        this.numbers = numbers;
     }
 }
