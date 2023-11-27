@@ -1,12 +1,7 @@
 package baseball.view;
 
-import baseball.game.Score;
-import baseball.utils.PrintUtils;
-import baseball.utils.Validator;
-import camp.nextstep.edu.missionutils.Console;
-
-public class outputView {
-    public void result(int ball, int strike) {
+public class OutputView {
+    public static void result(int ball, int strike) {
         String answer = "";
 
         if (ball>0){

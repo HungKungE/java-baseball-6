@@ -1,4 +1,4 @@
-package baseball.domain.model;
+package baseball.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
 
@@ -9,7 +9,7 @@ public class Computer {
     private List<Integer> numbers;
 
     public Computer(){
-        this.numbers = new ArrayList<>();
+        generateNewNumbers();
     };
 
     public List<Integer> getNumbers() {

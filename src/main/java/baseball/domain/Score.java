@@ -1,4 +1,4 @@
-package baseball.game;
+package baseball.domain;
 
 import static baseball.constvalue.ConstValue.*;
 public class Score {
@@ -32,10 +32,6 @@ public class Score {
     }
 
     public boolean isThreeStrike(){
-        if (this.strike==THREE_STRIKE){
-            return true;
-        }
-
-        return false;
+        return strike==THREE_STRIKE;
     }
 }
