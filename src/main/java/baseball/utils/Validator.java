@@ -8,19 +8,21 @@ public class Validator {
     private static final String ERROR_MESSAGE = "[ERROR] 숫자가 잘못된 형식입니다";
 
     public void validateUserNumbers(String userNumbers) {
-        if (isNullOrEmpty(userNumbers) || isInvalidUserNumbersLength(userNumbers)) {
+        if (isInvalidUserNumbersLength(userNumbers)) {
             throw new IllegalArgumentException(ERROR_MESSAGE);
         }
     }
 
     public void validateRestart(String restart) {
-        if (isNullOrEmpty(restart) || isInvalidRestartLength(restart) || !isOneOrTwo(restart)) {
+        if (isInvalidRestartLength(restart) || !isOneOrTwo(restart)) {
             throw new IllegalArgumentException(ERROR_MESSAGE);
         }
     }
 
-    private boolean isNullOrEmpty(String input) {
-        return input == null;
+    public void isNullOrEmpty(String input) {
+        if (input == null){
+            throw new IllegalArgumentException(ERROR_MESSAGE);
+        }
     }
 
     private boolean isInvalidUserNumbersLength(String userNumbers) {
