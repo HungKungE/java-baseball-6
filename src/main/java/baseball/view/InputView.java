@@ -1,7 +1,5 @@
 package baseball.view;
 
-import baseball.utils.PrintUtils;
-import baseball.utils.PrintUtils.*;
 import baseball.utils.Validator;
 import camp.nextstep.edu.missionutils.Console;
 

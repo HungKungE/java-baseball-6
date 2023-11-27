@@ -6,7 +6,6 @@ import baseball.domain.Score;
 import baseball.domain.User;
 import baseball.utils.PrintUtils;
 
-import baseball.view.ErrorView;
 import baseball.view.InputView;
 import baseball.view.OutputView;
 import java.util.List;
@@ -15,8 +14,7 @@ import static baseball.constvalue.ConstValue.*;
 public class GameController {
     private final Computer computer;
     private final Score score;
-    private User user;
-
+    private final User user;
     private final Restart restart;
 
     private final PrintUtils printUtil = new PrintUtils();

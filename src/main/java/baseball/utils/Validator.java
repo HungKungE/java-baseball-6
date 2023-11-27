@@ -1,7 +1,5 @@
 package baseball.utils;
 
-import org.mockito.internal.matchers.Null;
-
 import static baseball.constvalue.ConstValue.*;
 
 public class Validator {
