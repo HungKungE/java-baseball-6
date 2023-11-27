@@ -39,10 +39,12 @@ public class GameController {
             if (score.isThreeStrike()){
                 printUtil.printEnd();
                 restart.setRestart(InputView.gameRestart());
+                if (restart.getRestart()){
+                    computer.generateNewNumbers();
+                }
             }
 
             score.resetScore();
-            computer.generateNewNumbers();
         }
     }
 
@@ -57,7 +59,6 @@ public class GameController {
                 score.addBall();
             }
         }
-
         OutputView.result(score.getBall(), score.getStrike());
     }
 

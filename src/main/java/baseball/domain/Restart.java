@@ -20,6 +20,6 @@ public class Restart {
 
     private void validate(String restart){
         Validator.checkRestartLength(restart);
-        Validator.checkRestarType(restart);
+        Validator.checkRestartType(restart);
     }
 }

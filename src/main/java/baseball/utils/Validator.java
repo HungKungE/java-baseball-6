@@ -15,27 +15,27 @@ public class Validator {
 
     public static void checkNumbersLength(String userNumbers) {
         if (userNumbers.length() != NUMBER_LENGTH) {
-            throw new IllegalArgumentException(ERROR_MESSAGE);
+            throw new IllegalArgumentException(ERROR_MESSAGE + userNumbers);
         }
     }
 
     public static void checkNumbersRange(String userNumbers) {
         for (char userInput : userNumbers.toCharArray()){
             if (userInput < '1' || userInput > '9'){
-                throw new IllegalArgumentException(ERROR_MESSAGE);
+                throw new IllegalArgumentException(ERROR_MESSAGE + userNumbers);
             }
         }
     }
 
     public static void checkRestartLength(String restart) {
         if (restart.length() != RESTART_LENGTH) {
-            throw new IllegalArgumentException(ERROR_MESSAGE);
+            throw new IllegalArgumentException(ERROR_MESSAGE + restart);
         }
     }
 
-    public static void checkRestarType(String restart) {
+    public static void checkRestartType(String restart) {
         if(!restart.equals(RESTART) && !restart.equals(STOP)){
-            throw new IllegalArgumentException(ERROR_MESSAGE);
+            throw new IllegalArgumentException(ERROR_MESSAGE + restart);
         }
     }
 }
